@@ -162,6 +162,9 @@ section {
   color: var(--color-grey);
   font-size: 0.5rem;
 }
+#popup_close:hover {
+  cursor: pointer;
+}
 #popup_img {
   width: 8rem;
 }
