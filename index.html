@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/09de26536d.js" crossorigin="anonymous"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- JS -->
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <title>ForWord</title>
 </head>
 <body>
@@ -26,26 +33,26 @@
                 <div class="greeting">Sign up to get your free trial today!</div>
                 <div class="login_name">
                     <label for="name">Name</label>
-                <input required autofocus type="text" name="name" id="name" placeholder="Enter your Name">
+                <input autofocus type="text" id="name" placeholder="Enter your Name">
                 </div>
                 <div class="login_email">
                     <label for="email">Email</label>
-                    <input required autofocus type="email" name="email" id="email">
+                    <input autofocus type="email" id="email">
                 </div>
                 <div class="login_agreement">
                     <input required type="checkbox" id="agreement" name="agreement"
                            checked>
                     <label for="scales">I agree to the <a href="#">terms and conditions</a></label>
                   </div>
-                  <input type="submit" value="Start My Free Trial">
+                  <button id="submit_btn">Start My Free Trial</button>
             </form>
         </div>
     </section>
-    <div class="modal">
+    <div class="modal hidden">
         <div class="modal_overlay"></div>
         <div class="modal_popup">
-            <button id="popup_close"></button>
-            <div class="popup_img"><img src="" alt="welcome"></div>
+            <button id="popup_close"><i class="fas fa-times"></i></button>
+            <div id="popup_img"><img src="img/welcome.png" alt="welcome"></div>
             <h3 id="popup_greeting">Welcome!</h3>
             <p id="popup_text">Thanks for filling out the form. A confirmaion email has been sent to your hotmail account.</p>
         </div>
