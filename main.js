@@ -23,7 +23,7 @@ modal.classList.remove('hidden');
 const greeting = document.getElementById('popup_greeting');
 const text = document.getElementById('popup_text');
 greeting.innerHTML = `Welcome, ${userName}!`;
-text.innerHTML = `Thanks for filling out the form. A confirmaion email has been sent to your ${domain} account.`
+text.innerHTML = `Thanks for filling out the form. A confirmation email has been sent to your ${domain} account.`
 
 }
 
