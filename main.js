@@ -7,15 +7,12 @@ const loginEmail = document.getElementById('email');
 const submitBtn = document.getElementById('submit_btn');
 const modal = document.querySelector('.modal');
 
-
-loginForm.addEventListener('submit', loginFormOnSubmit);
-
+// When click login button
 function loginFormOnSubmit(event) {
-    const userName = loginName.value; 
-    const userEmail = loginEmail.value;
+    let userName = loginName.value; 
+    let userEmail = loginEmail.value;
     const domain = userEmail.substring(userEmail.lastIndexOf("@") +1);
     event.preventDefault(); 
-    
     openModal(userName, domain);
 
 }
@@ -30,7 +27,10 @@ text.innerHTML = `Thanks for filling out the form. A confirmaion email has been 
 
 }
 
-modal.addEventListener('click', closeModal);
+
 function closeModal(){
     modal.classList.add('hidden');
 }
+
+loginForm.addEventListener('submit', loginFormOnSubmit);
+modal.addEventListener('click', closeModal);
