@@ -101,15 +101,40 @@ section {
   border: 2px solid var(--color-grey_light);
   font-size: 0.7rem;
 }
+/* Checkbox */
 .login_agreement {
   display: flex;
   align-items: center;
+}
+#agreement {
+  display: none;
+}
+#agreement + #agreement_box {
+  display: inline-block;
+  margin-right: 0.5rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 2px solid black;
+  /* background-color: var(--color-pink); */
+  border-radius: 4px;
+  cursor: pointer;
+}
+#agreement:checked + #agreement_box {
+  background-color: var(--color-pink);
+  border: none;
+}
+
+#agreement_label {
   font-size: 0.8rem;
   font-weight: var(--font-semiB);
 }
-.login_agreement > label > a:visited {
+
+#agreement_label > a,
+#agreement_label > a:visited {
+  text-decoration: underline;
   color: black;
 }
+
 #submit_btn {
   margin-top: 1.5rem;
   border-style: none;
