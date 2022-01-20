@@ -226,7 +226,7 @@ section {
   display: none;
 }
 
-/*For blew 770px  */
+/*For under 770px  */
 @media only screen and (max-width: 770px) {
   section {
     display: flex;
