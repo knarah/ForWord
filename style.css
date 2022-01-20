@@ -144,6 +144,7 @@ section {
 
 #agreement_label > a {
   text-decoration: underline;
+  color: black;
 }
 #agreement_label > a:visited {
   color: blue;
