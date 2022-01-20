@@ -8,13 +8,15 @@
   --color_grey_dark: #333333;
 
   /* font weight */
-  --font-semiB: 600;
-  --font-bold: 800;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
 }
 
 * {
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 body {
@@ -25,13 +27,16 @@ body {
 section {
   margin: 8rem 5rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 50rem;
+  grid-template-columns: 1fr 0.8fr;
+  max-width: 60rem;
 }
 /* Leftpart of the section */
 .left_container {
   width: 100%;
   padding-right: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .left_logo {
   display: flex;
@@ -42,56 +47,61 @@ section {
 }
 .left_logo span {
   margin-left: 0.5rem;
-  font-weight: var(--font-semiB);
+  font-size: 1.3rem;
+  font-weight: var(--font-semi-bold);
 }
 .left_heading {
   margin: 1.5rem 0;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: var(--font-bold);
 }
 .left_heading span {
   color: var(--color-pink);
 }
 .left_text {
+  margin: 0;
   color: var(--color-grey);
-  line-height: 1.5rem;
+  font-weight: var(--font-regular);
+  font-size: 1.3rem;
+  line-height: 2rem;
 }
 
 /* Right part of the section-login */
 .right_container {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.login_form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid var(--color-grey_light);
+  border-radius: 10px;
+  padding: 3rem 2rem;
 }
 .tag {
   position: absolute;
   top: -1rem;
   left: -1rem;
   background-color: var(--color-yellow);
-  padding: 0.8rem 1.3rem;
-  font-size: 0.8rem;
-  font-weight: var(--font-semiB);
-}
-.login_form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: 2px solid var(--color-grey_light);
-  border-radius: 10px;
-  padding: 2rem;
+  padding: 1rem 1.3rem;
+  font-size: 1rem;
+  font-weight: var(--font-semi-bold);
 }
 .greeting {
+  margin-bottom: 0.5rem;
   font-size: 1.5rem;
   font-weight: var(--font-bold);
 }
 .login_name,
 .login_email {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   display: flex;
   flex-direction: column;
   font-size: 0.8rem;
-  font-weight: var(--font-semiB);
+  font-weight: var(--font-semi-bold);
 }
 #name,
 #email {
@@ -99,10 +109,12 @@ section {
   padding: 0.7rem;
   border-radius: 10px;
   border: 2px solid var(--color-grey_light);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+  font-weight: var(--font-medium);
 }
 /* Checkbox */
 .login_agreement {
+  margin-top: 0.5rem;
   display: flex;
   align-items: center;
 }
@@ -114,7 +126,7 @@ section {
   margin-right: 0.5rem;
   width: 0.8rem;
   height: 0.8rem;
-  border: 2px solid black;
+  border: 2px solid var(--color-grey_light);
   /* background-color: var(--color-pink); */
   border-radius: 4px;
   cursor: pointer;
@@ -122,17 +134,19 @@ section {
 #agreement:checked + #agreement_box {
   background-color: var(--color-pink);
   border: none;
+  transition: all 300ms ease-in-out;
 }
 
 #agreement_label {
   font-size: 0.8rem;
-  font-weight: var(--font-semiB);
+  font-weight: var(--font-semi-bold);
 }
 
-#agreement_label > a,
-#agreement_label > a:visited {
+#agreement_label > a {
   text-decoration: underline;
-  color: black;
+}
+#agreement_label > a:visited {
+  color: blue;
 }
 
 #submit_btn {
@@ -142,7 +156,8 @@ section {
   color: white;
   border-radius: 10px;
   padding: 1rem 4rem;
-  font-weight: var(--font-semiB);
+  font-size: 1rem;
+  font-weight: var(--font-semi-bold);
 }
 #submit_btn:hover {
   cursor: pointer;
@@ -210,13 +225,13 @@ section {
   display: none;
 }
 
-/*For blew 768px  */
-@media only screen and (max-width: 768px) {
+/*For blew 770px  */
+@media only screen and (max-width: 770px) {
   section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     padding: 2rem;
     margin: 0;
   }

@@ -10,13 +10,15 @@ const modal = document.querySelector('.modal');
 function loginFormOnSubmit(event) {
     const userName = loginName.value; 
     const userEmail = loginEmail.value;
-    const domain = userEmail.substring(userEmail.lastIndexOf('@') +1, userEmail.lastIndexOf('.'));
+    const domainString = userEmail.substring(userEmail.lastIndexOf('@') +1) //To get domain(XXX.xx.ca OR XXX.com)
+    const domainName = domainString.substring(0, domainString.indexOf('.')); // To get only domain name
+    const domain = domainName[0].toUpperCase() + domainName.slice(1); //Capitalizing the first letter of domain name
     const agreement = document.getElementById('agreement');
-    console.log(agreement);
-  
     event.preventDefault(); 
+    
+    
     openModal(userName, domain);
-    // Empty input
+    // Clear input
     loginName.value='';
     loginEmail.value='';
     //uncheck the checkbox
